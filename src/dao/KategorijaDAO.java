@@ -40,7 +40,7 @@ public class KategorijaDAO { //Samo mapa kategorija i rukovanje njima
 	// Metoda za sacuvavanje liste kategorija u fajl
 	public boolean sacuvajKategorije() {
 		boolean uspesno = true;
-		String lokacija = path + "\\categories.json"; //Provedi da li stvarno mora json
+		String lokacija = path + "\\categories.json"; 
 		
 		//Jednostavno cu da kopiram sa neta, pa kud puklo da puklo
 		
@@ -66,7 +66,7 @@ public class KategorijaDAO { //Samo mapa kategorija i rukovanje njima
 			} else uspesno = false;
 		}
 		
-		return true; //Promeni da bude "uspesno" kasnije, prvo vidi da li ce ovako da radi
+		return uspesno; //Promeni da bude "uspesno" kasnije, prvo vidi da li ce ovako da radi
 	}
 	
 	// Metoda za ucitavanje kategorija
@@ -134,6 +134,18 @@ public class KategorijaDAO { //Samo mapa kategorija i rukovanje njima
 		if(kategorije.containsKey(nazivKategorije)){
 			return true;
 		} else return false;
+	}
+	public Map<String, Kategorija> getKategorije() {
+		return kategorije;
+	}
+	public void setKategorije(Map<String, Kategorija> kategorije) {
+		this.kategorije = kategorije;
+	}
+	public static String getPath() {
+		return path;
+	}
+	public static void setPath(String path) {
+		KategorijaDAO.path = path;
 	}
 	
 	

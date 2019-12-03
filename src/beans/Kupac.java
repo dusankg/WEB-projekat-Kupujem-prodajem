@@ -18,6 +18,7 @@ public class Kupac {
 	private ArrayList<Oglas> listaPorucenihOglasa = new ArrayList<Oglas>();
 	private ArrayList<Oglas> listaDostavljenihOglasa = new ArrayList<Oglas>();
 	private ArrayList<Oglas> listaOmiljenihOglasa = new ArrayList<Oglas>();
+	private ArrayList<Recenzija>listaRecenzija=new ArrayList<>();
 	private ArrayList<Poruka> poruke = new ArrayList<>();
 
 	// Dodatni parametri za prodavce
@@ -36,6 +37,7 @@ public class Kupac {
 		this.email = email;
 		this.datumRegistracije = datumRegistracije;
 	}	
+	public Kupac() {}
 	
 	// Get set
 	public String getKorisnickoIme() {
@@ -98,6 +100,38 @@ public class Kupac {
 	
 	public void setPoruke(ArrayList<Poruka> poruke) {
 		this.poruke = poruke;
+	}
+
+	public ArrayList<Oglas> getListaPorucenihOglasa() {
+		return listaPorucenihOglasa;
+	}
+
+	public void setListaPorucenihOglasa(ArrayList<Oglas> listaPorucenihOglasa) {
+		this.listaPorucenihOglasa = listaPorucenihOglasa;
+	}
+
+	public ArrayList<Oglas> getListaDostavljenihOglasa() {
+		return listaDostavljenihOglasa;
+	}
+
+	public void setListaDostavljenihOglasa(ArrayList<Oglas> listaDostavljenihOglasa) {
+		this.listaDostavljenihOglasa = listaDostavljenihOglasa;
+	}
+
+	public ArrayList<Oglas> getListaOmiljenihOglasa() {
+		return listaOmiljenihOglasa;
+	}
+
+	public void setListaOmiljenihOglasa(ArrayList<Oglas> listaOmiljenihOglasa) {
+		this.listaOmiljenihOglasa = listaOmiljenihOglasa;
+	}
+
+	public ArrayList<Recenzija> getListaRecenzija() {
+		return listaRecenzija;
+	}
+
+	public void setListaRecenzija(ArrayList<Recenzija> listaRecenzija) {
+		this.listaRecenzija = listaRecenzija;
 	}
 	
 	

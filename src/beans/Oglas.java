@@ -16,9 +16,10 @@ public class Oglas {
 	private Date datumIsticanja;
 	private Boolean aktivan;
 	private String grad;
-	
+	private String koJeNapravio;
+	private int uKolikoOmiljenih;
 	// Na pocetku uvek mora da bude prazna
-	private ArrayList<Recenzija> listaRezencija = new ArrayList<>();
+	private ArrayList<Recenzija> listaRecenzija = new ArrayList<>();
 	
 	
 	// Konstruktori. Za sada samo jedan. Za novi oglas stavljati da je broj lajkova i dislajkova 0
@@ -36,7 +37,8 @@ public class Oglas {
 			this.datumIsticanja = datumIsticanja;
 			this.aktivan = aktivan;
 			this.grad = grad;
-			listaRezencija = new ArrayList<>();
+			
+			listaRecenzija = new ArrayList<>();
 	}	
 	
 	public Oglas(String naziv, double cena, String opis, int lajkovi, int dislajkovi, String slika,
@@ -52,9 +54,11 @@ public class Oglas {
 			this.datumIsticanja = datumIsticanja;
 			this.aktivan = aktivan;
 			this.grad = grad;
-			listaRezencija = new ArrayList<>();
+		
+			listaRecenzija = new ArrayList<>();
 	}
 
+	public Oglas() {}
 	// Get set
 	public String getNaziv() {
 		return naziv;
@@ -125,13 +129,32 @@ public class Oglas {
 		this.idOglasa = idOglasa;
 	}
 
-	public ArrayList<Recenzija> getListaRezencija() {
-		return listaRezencija;
+
+
+	public ArrayList<Recenzija> getListaRecenzija() {
+		return listaRecenzija;
 	}
 
-	public void setListaRezencija(ArrayList<Recenzija> listaRezencija) {
-		this.listaRezencija = listaRezencija;
-	}	
+	public void setListaRecenzija(ArrayList<Recenzija> listaRecenzija) {
+		this.listaRecenzija = listaRecenzija;
+	}
+
+	public String getKoJeNapravio() {
+		return koJeNapravio;
+	}
+
+	public void setKoJeNapravio(String koJeNapravio) {
+		this.koJeNapravio = koJeNapravio;
+	}
+
+	public int getuKolikoOmiljenih() {
+		return uKolikoOmiljenih;
+	}
+
+	public void setuKolikoOmiljenih(int uKolikoOmiljenih) {
+		this.uKolikoOmiljenih = uKolikoOmiljenih;
+	}
 	
 	
+
 }

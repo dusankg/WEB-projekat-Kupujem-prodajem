@@ -2,39 +2,54 @@ package beans;
 
 public class Poruka {
 
-	private String nazivOglasa;
-	private String posiljalac;
+	public int id;
+	private String nazivPoruke;
 	private String naslovPoruke;
 	private String sadrzajPoruke;
 	private String datum;
-	private String vreme;
-	public int idOglasa=-1; // Jer ko zna, mozda zatreba
-	
-	//Dodatni parametri
-	private int idPoruke; 
+	private String ulogaPoslala;
+	private String posiljalac;
+	private String ulogiPoslato;
 	private String primalac;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	//Dodatni parametri
 	
-	// Konstruktori
-	public Poruka(String nazivOglasa, String posiljalac, String naslovPoruke, String sadrzajPoruke, String datum,
-			String vreme, int idPoruke, String primalac) {
+
+	public Poruka(int id, String nazivPoruke, String naslovPoruke, String sadrzajPoruke, String datum,
+			String ulogaPoslala, String posiljalac, String ulogiPoslato, String primalac) {
 		super();
-		this.nazivOglasa = nazivOglasa;
-		this.posiljalac = posiljalac;
+		this.id = id;
+		this.nazivPoruke = nazivPoruke;
 		this.naslovPoruke = naslovPoruke;
 		this.sadrzajPoruke = sadrzajPoruke;
 		this.datum = datum;
-		this.vreme = vreme;
-		this.idPoruke = idPoruke;
+		this.ulogaPoslala = ulogaPoslala;
+		this.posiljalac = posiljalac;
+		this.ulogiPoslato = ulogiPoslato;
 		this.primalac = primalac;
 	}
 
+	
+	
+	
+
 	// Get set
-	public String getNazivOglasa() {
-		return nazivOglasa;
+	public String getNazivPoruke() {
+		return nazivPoruke;
 	}
 
-	public void setNazivOglasa(String nazivOglasa) {
-		this.nazivOglasa = nazivOglasa;
+	
+
+	public void setNazivPoruke(String nazivPoruke) {
+		this.nazivPoruke = nazivPoruke;
 	}
 
 	public String getPosiljalac() {
@@ -69,21 +84,6 @@ public class Poruka {
 		this.datum = datum;
 	}
 
-	public String getVreme() {
-		return vreme;
-	}
-
-	public void setVreme(String vreme) {
-		this.vreme = vreme;
-	}
-
-	public int getIdPoruke() {
-		return idPoruke;
-	}
-
-	public void setIdPoruke(int idPoruke) {
-		this.idPoruke = idPoruke;
-	}
 
 	public String getPrimalac() {
 		return primalac;
@@ -92,7 +92,22 @@ public class Poruka {
 	public void setPrimalac(String primalac) {
 		this.primalac = primalac;
 	}
-	
+
+	public String getUlogiPoslato() {
+		return ulogiPoslato;
+	}
+
+	public void setUlogiPoslato(String ulogiPoslato) {
+		this.ulogiPoslato = ulogiPoslato;
+	}
+
+	public String getUlogaPoslala() {
+		return ulogaPoslala;
+	}
+
+	public void setUlogaPoslala(String ulogaPoslala) {
+		this.ulogaPoslala = ulogaPoslala;
+	}
 	
 	
 	

@@ -3,21 +3,21 @@ package beans;
 public class Recenzija {
 
 	private int idRecenzije=0;
-	private Oglas oglas;
-	private String recezent;
+	private String oglas;
+	private String recenzent;
 	private String naslovRecenzije;
 	private String sadrzajRecenzije;
 	private String slika;
 	private Boolean opisTacan;
-	private String ispostovanDogovor;
+	private Boolean ispostovanDogovor;
 	
 	// Kontruktori
-	public Recenzija(int idRecenzije, Oglas oglas, String recezent, String naslovRecenzije, String sadrzajRecenzije,
-			String slika, Boolean opisTacan, String ispostovanDogovor) {
+	public Recenzija(int idRecenzije, String oglas, String recenzent, String naslovRecenzije, String sadrzajRecenzije,
+			String slika, Boolean opisTacan, Boolean ispostovanDogovor) {
 		super();
 		this.idRecenzije = idRecenzije;
 		this.oglas = oglas;
-		this.recezent = recezent;
+		this.recenzent = recenzent;
 		this.naslovRecenzije = naslovRecenzije;
 		this.sadrzajRecenzije = sadrzajRecenzije;
 		this.slika = slika;
@@ -33,20 +33,20 @@ public class Recenzija {
 		this.idRecenzije = idRecenzije;
 	}
 
-	public Oglas getOglas() {
+	public String getOglas() {
 		return oglas;
 	}
 
-	public void setOglas(Oglas oglas) {
+	public void setOglas(String oglas) {
 		this.oglas = oglas;
 	}
 
-	public String getRecezent() {
-		return recezent;
+	public String getRecenzent() {
+		return recenzent;
 	}
 
-	public void setRecezent(String recezent) {
-		this.recezent = recezent;
+	public void setRecenzent(String recenzent) {
+		this.recenzent = recenzent;
 	}
 
 	public String getNaslovRecenzije() {
@@ -73,21 +73,21 @@ public class Recenzija {
 		this.slika = slika;
 	}
 
-	public Boolean getOpisTacan() {
+	public Boolean isOpisTacan() {
 		return opisTacan;
 	}
 
 	public void setOpisTacan(Boolean opisTacan) {
 		this.opisTacan = opisTacan;
 	}
-
-	public String getIspostovanDogovor() {
+	public Boolean isIspostovanDogovor() {
 		return ispostovanDogovor;
 	}
-
-	public void setIspostovanDogovor(String ispostovanDogovor) {
+	public void setIspostovanDogovor(Boolean ispostovanDogovor) {
 		this.ispostovanDogovor = ispostovanDogovor;
 	}
+
+
 	
 
 	

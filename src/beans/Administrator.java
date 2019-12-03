@@ -36,6 +36,8 @@ public class Administrator {
 		this.datumRegistracije = datumRegistracije;
 	}
 
+	public Administrator() {}
+	
 	public String getKorisnickoIme() {
 		return korisnickoIme;
 	}

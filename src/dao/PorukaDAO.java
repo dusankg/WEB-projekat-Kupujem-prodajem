@@ -6,6 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +28,8 @@ public class PorukaDAO {
 
 	private Map<String, Poruka> poruke = new HashMap<>();
 	private static String path;
+	public static String trenutnoVreme;
+	public static int idPoruke=0;
 	
 	public PorukaDAO(String path) {
 		this.path = path;
@@ -105,6 +111,19 @@ public class PorukaDAO {
 				}
 			}
 		}
+	}
+	public static void getCurrentTimeWithOffset(){
+	    
+	    ZoneOffset zoneOffset=ZoneOffset.of("-08:00");
+	    ZoneId zoneId=ZoneId.ofOffset("UTC", zoneOffset);
+	    LocalTime offsetTime=LocalTime.now(zoneId);
+	    DateTimeFormatter formatter=DateTimeFormatter.ofPattern("hh:mm a");
+	    String formattedTime=offsetTime.format(formatter);
+	    trenutnoVreme = formattedTime;
+	}
+	
+	public static void uvecajBrojac(){
+		idPoruke++;
 	}
 	// get set
 

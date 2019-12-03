@@ -48,8 +48,34 @@ public class Prodavac {
 		//Markiran ce uvek u startu biti netacno
 		this.markiran = false;
 	}
+	
+	public Prodavac() {
+		
+	}
 
 	
+
+	public Prodavac(String korisnickoIme, String lozinka, String ime, String prezime, String uloga,
+			String kontaktTelefon, String grad, String email, String datumRegistracije, int brojLajkova,
+			int brojDislajkova, boolean markiran) {
+		super();
+		this.korisnickoIme = korisnickoIme;
+		this.lozinka = lozinka;
+		this.ime = ime;
+		this.prezime = prezime;
+		this.uloga = uloga;
+		this.kontaktTelefon = kontaktTelefon;
+		this.grad = grad;
+		this.email = email;
+		this.datumRegistracije = datumRegistracije;
+		this.brojLajkova = brojLajkova;
+		this.brojDislajkova = brojDislajkova;
+		this.markiran = markiran;
+	}
+
+
+
+
 
 	// Get set
 	public String getKorisnickoIme() {

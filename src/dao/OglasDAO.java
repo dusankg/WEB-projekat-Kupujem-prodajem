@@ -81,7 +81,7 @@ public class OglasDAO {
 		}
 	}
 	
-	public void sacuvajOglaseg(String path) {
+	public void sacuvajOglase(String path) {
 		String putanja = path + "\\oglasi.json";
 		File f = new File(putanja);
 		FileWriter fileWriter = null;
@@ -114,4 +114,13 @@ public class OglasDAO {
 	public void setOglasi(Map<String, Oglas> oglasi) {
 		this.oglasi = oglasi;
 	}
+
+	public static String getPath() {
+		return path;
+	}
+
+	public static void setPath(String path) {
+		OglasDAO.path = path;
+	}
+	
 }
